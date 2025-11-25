@@ -1,8 +1,7 @@
 applicationName: "nginx-test"
 ports:
   - name: http
-    containerPort: 80
-    protocol: TCP
+    port: 80
 
 heatlhcheck:
   path: /
