@@ -1,7 +1,5 @@
 applicationName: "nginx-test"
-ports:
-  - name: http
-    port: 80
+port: 80
 
 heatlhcheck:
   path: /
@@ -9,3 +7,4 @@ heatlhcheck:
 image:
   repository: nginx
   tag: "1"
+  
