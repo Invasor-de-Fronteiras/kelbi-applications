@@ -3,7 +3,8 @@ app:
   image: "ghcr.io/invasor-de-fronteiras/mirim_bot:sha-e0f6753"
   replicas: 1
 
-config: {}
+config:
+  env: /prod/mirim-bot/env
 
 network:
   expose: false
