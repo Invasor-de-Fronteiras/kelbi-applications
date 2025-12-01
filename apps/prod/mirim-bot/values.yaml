@@ -1,10 +1,10 @@
 app:
-  name: "nginx"
+  name: "mirim-bot"
   image: "ghcr.io/invasor-de-fronteiras/mirim_bot:sha-e0f6753"
   replicas: 1
 
 config:
-  env: /prod/mirim-bot/env
+  env: mirim-bot-secrets
 
 network:
   expose: false
