@@ -1,6 +1,6 @@
 app:
   name: "nginx"
-  image: "ghcr.io/invasor-de-fronteiras/mirim_bot@sha256:f69865b30a71edb7b4856f4ba712cc89af73ba1f00a25ab8ca7c956a68cb9616"
+  image: "ghcr.io/invasor-de-fronteiras/mirim_bot:sha-e0f6753"
   replicas: 1
 
 config: {}
