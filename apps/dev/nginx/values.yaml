@@ -1,11 +1,11 @@
 app:
   name: "nginx"
-  image: "nginx:latest"
+  image: "ghcr.io/invasor-de-fronteiras/mirim_bot:main"
   replicas: 1
 
 config:
   port: 80
 
 network:
-  expose: true
+  expose: false
   domain: "nginx.arcamh.com"
