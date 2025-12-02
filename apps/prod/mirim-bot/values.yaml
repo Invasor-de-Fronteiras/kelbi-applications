@@ -11,10 +11,10 @@ network:
 
 resources:
   limits:
-    cpu: 300m
+    cpu: 200m
     memory: 200Mi
   requests:
-    cpu: 300m
+    cpu: 200m
     memory: 200Mi
 
 autoscaling:
