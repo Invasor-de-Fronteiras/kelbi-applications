@@ -9,6 +9,14 @@ config:
 network:
   expose: false
 
+resources:
+  limits:
+    cpu: 200m
+    memory: 200Mi
+  requests:
+    cpu: 200m
+    memory: 200Mi
+
 autoscaling:
   enabled: false
   minReplicas: 1
