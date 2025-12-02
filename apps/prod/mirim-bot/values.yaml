@@ -8,7 +8,7 @@ config:
 
 network:
   expose: false
-
+resources: {}
 autoscaling:
   enabled: false
   minReplicas: 1
