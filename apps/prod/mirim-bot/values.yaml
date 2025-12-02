@@ -1,6 +1,6 @@
 app:
   name: "mirim-bot"
-  image: "ghcr.io/invasor-de-fronteiras/mirim_bot:sha-c9f7734"
+  image: "ghcr.io/invasor-de-fronteiras/mirim_bot:sha-64a14e2"
   replicas: 1
 
 config:
@@ -8,6 +8,9 @@ config:
 
 network:
   expose: false
+
+health_check:
+  path: /health
 
 resources:
   limits:
