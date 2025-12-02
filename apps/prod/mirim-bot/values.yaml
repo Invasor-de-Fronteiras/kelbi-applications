@@ -1,6 +1,6 @@
 app:
   name: "mirim-bot"
-  image: "ghcr.io/invasor-de-fronteiras/mirim_bot:sha-e0f6753"
+  image: "ghcr.io/invasor-de-fronteiras/mirim_bot:sha-759fcc7"
   replicas: 1
 
 config:
