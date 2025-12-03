@@ -12,9 +12,6 @@ network:
   expose: true
   domain: "admin.arcamh.com"
 
-health_check:
-  path: /health
-
 resources:
   limits:
     cpu: 300m
