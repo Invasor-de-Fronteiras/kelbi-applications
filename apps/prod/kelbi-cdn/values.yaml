@@ -35,8 +35,8 @@ volumes:
       type: Directory
   - name: cache-dirs
     hostPath:
-      path: /tmp/nginx
-      type: Directory
+      path: /var/cache/nginx
+      type: DirectoryOrCreate
   - name: nginx-conf
     configMap:
       name: kelbi-cdn-nginx-conf
