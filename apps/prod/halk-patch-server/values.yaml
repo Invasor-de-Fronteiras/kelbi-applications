@@ -1,0 +1,28 @@
+
+
+app:
+  name: "kelbi-api"
+  image: "ghcr.io/invasor-de-fronteiras/kelbi-api:sha-64a14e2"
+  replicas: 1
+
+config:
+  env: kelbi-api-secrets
+network:
+  expose: true
+  domain: "kelbi-api.arcamh.com"
+
+health_check:
+  path: /health
+
+resources:
+  limits:
+    cpu: 300m
+    memory: 500Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
+
+autoscaling:
+  enabled: true
+  minReplicas: 2
+  maxReplicas: 5
