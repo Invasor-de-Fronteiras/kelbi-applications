@@ -7,7 +7,7 @@ app:
 
 config:
   port: 80
-  
+
 network:
   expose: true
   domain: "cdn.arcamh.com"
@@ -42,3 +42,8 @@ volumeMounts:
   - name: nginx-conf
     mountPath: "/etc/nginx"
     readOnly: true
+
+securityContext:
+  runAsNonRoot: true
+  runAsUser: 1000
+  fsGroup: 1000
