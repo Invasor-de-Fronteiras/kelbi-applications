@@ -33,10 +33,6 @@ volumes:
     hostPath:
       path: /root/volumes/kelbi/static
       type: Directory
-  - name: cache-dirs
-    hostPath:
-      path: /var/cache/nginx
-      type: DirectoryOrCreate
   - name: nginx-conf
     configMap:
       name: kelbi-cdn-nginx-conf
@@ -46,10 +42,3 @@ volumeMounts:
   - name: nginx-conf
     mountPath: "/etc/nginx"
     readOnly: true
-  - name: cache-dirs
-    mountPath: "/tmp/nginx"
-
-securityContext:
-  runAsNonRoot: false
-  runAsUser: 1000
-  fsGroup: 1000
