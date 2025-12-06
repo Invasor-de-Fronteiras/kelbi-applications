@@ -27,3 +27,13 @@ autoscaling:
   enabled: true
   minReplicas: 2
   maxReplicas: 5
+
+volumes:
+  - name: static
+    hostPath:
+      path: /root/volumes/kelbi/static
+      type: Directory
+
+volumeMounts:
+  - name: "static"
+    mountPath: /data/assets
