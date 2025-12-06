@@ -39,5 +39,5 @@ volumeMounts:
     mountPath: /data/assets
 
 securityContext:
-  runAsNonRoot: false
+  runAsNonRoot: true
   runAsUser: 1000
