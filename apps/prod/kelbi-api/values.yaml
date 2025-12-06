@@ -37,3 +37,7 @@ volumes:
 volumeMounts:
   - name: "static"
     mountPath: /data/assets
+
+securityContext:
+  runAsNonRoot: false
+  runAsUser: kelbi-api
