@@ -40,4 +40,4 @@ volumeMounts:
 
 securityContext:
   runAsNonRoot: false
-  runAsUser: kelbi-api
+  runAsUser: 1000
