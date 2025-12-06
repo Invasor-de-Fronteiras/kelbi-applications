@@ -24,7 +24,3 @@ autoscaling:
   enabled: true
   minReplicas: 2
   maxReplicas: 5
-
-securityContext:
-  runAsNonRoot: false
-  runAsUser: kelbi-api
