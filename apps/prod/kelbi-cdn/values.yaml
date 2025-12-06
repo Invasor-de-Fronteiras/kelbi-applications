@@ -44,6 +44,6 @@ volumeMounts:
     readOnly: true
 
 securityContext:
-  runAsNonRoot: true
+  runAsNonRoot: false
   runAsUser: 1000
   fsGroup: 1000
