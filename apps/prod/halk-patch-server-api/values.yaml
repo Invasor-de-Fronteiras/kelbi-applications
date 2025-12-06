@@ -2,17 +2,15 @@
 
 app:
   name: "kelbi-api"
-  image: "ghcr.io/invasor-de-fronteiras/kelbi-api:sha-64a14e2"
+  image: "ghcr.io/invasor-de-fronteiras/halk-patch-server:sha-7bacf54"
   replicas: 1
 
 config:
-  env: kelbi-api-secrets
-network:
-  expose: true
-  domain: "kelbi-api.arcamh.com"
+  env: kelbi-hatch-server-secrets
+  port: 5000
 
 health_check:
-  path: /health
+  path: /
 
 resources:
   limits:
