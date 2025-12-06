@@ -1,13 +1,13 @@
 
 
 app:
-  name: "halk-patch-server-api"
+  name: "halk-patch-server-prerelease"
   image: "ghcr.io/invasor-de-fronteiras/halk-patch-server:sha-7bacf54"
   replicas: 1
 
 config:
   env: kelbi-hatch-server-secrets
-  port: 5000
+  port: 4001
 
 resources:
   limits:
