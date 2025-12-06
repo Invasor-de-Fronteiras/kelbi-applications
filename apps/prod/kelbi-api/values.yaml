@@ -2,7 +2,7 @@
 
 app:
   name: "kelbi-api"
-  image: "ghcr.io/invasor-de-fronteiras/kelbi-api:sha-64a14e2"
+  image: "ghcr.io/invasor-de-fronteiras/kelbi-api:sha-8a5a05c"
   replicas: 1
 
 config:
