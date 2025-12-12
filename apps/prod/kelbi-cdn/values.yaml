@@ -2,7 +2,7 @@
 
 app:
   name: "kelbi-cdb"
-  image: "nginx:1.27-alpine"
+  image: "nginx:1.29-alpine"
   replicas: 1
 
 config:
