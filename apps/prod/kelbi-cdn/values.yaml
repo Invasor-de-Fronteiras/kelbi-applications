@@ -42,3 +42,26 @@ volumeMounts:
   - name: nginx-conf
     mountPath: "/etc/nginx"
     readOnly: true
+
+configmapData:
+  name: kelbi-cdn-nginx-conf
+  contents:
+    nginx.conf: |
+      events {
+        worker_connections 1024;
+      }
+
+      http {
+        server {
+          location /assets {
+            alias /data/assets;
+            autoindex on;
+          }
+
+          location /health {
+            access_log off;
+            add_header 'Content-Type' 'text/plain';
+            return 200 "healthy\n";
+          }
+        }
+      }
