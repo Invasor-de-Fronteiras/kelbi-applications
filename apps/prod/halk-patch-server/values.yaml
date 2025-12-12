@@ -9,6 +9,20 @@ config:
   env: kelbi-hatch-server-secrets
   port: 5000
 
+service:
+  ports:
+    - name: api
+      port: 5000
+      targetPort: 5000
+      protocol: TCP
+    - name: release
+      port: 4000
+      targetPort: 4000
+      protocol: TCP
+    - name: prerelease
+      port: 4001
+      targetPort: 4001
+      protocol: TCP
 resources:
   limits:
     cpu: 300m
