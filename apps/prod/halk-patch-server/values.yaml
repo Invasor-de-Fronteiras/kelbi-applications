@@ -39,3 +39,13 @@ autoscaling:
   enabled: true
   minReplicas: 2
   maxReplicas: 5
+
+
+volumes:
+  - name: data
+    hostPath:
+      path: /root/volumes/halk-patch-server/data
+      type: Directory
+volumeMounts:
+  - name: "data"
+    mountPath: /app/data
