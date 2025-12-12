@@ -35,7 +35,7 @@ volumes:
       type: Directory
   - name: nginx-conf
     configMap:
-      name: kelbi-cdn-nginx-conf
+      name: prod-kelbi-cdn-kelbi-cdb
 volumeMounts:
   - name: "static"
     mountPath: /data/assets
@@ -44,7 +44,7 @@ volumeMounts:
     readOnly: true
 
 configmapData:
-  name: kelbi-cdn-nginx-conf
+  name: prod-kelbi-cdn-kelbi-cdb
   contents:
     nginx.conf: |
       events {
