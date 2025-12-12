@@ -2,7 +2,7 @@
 
 app:
   name: "halk-patch-server-api"
-  image: "ghcr.io/invasor-de-fronteiras/halk-patch-server:sha-7bacf54"
+  image: "ghcr.io/invasor-de-fronteiras/halk-patch-server:sha-0f7fe87"
   replicas: 1
 
 config:
