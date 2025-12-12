@@ -23,6 +23,10 @@ service:
       port: 4001
       targetPort: 4001
       protocol: TCP
+
+health_check:
+  path: /health
+
 resources:
   limits:
     cpu: 300m
