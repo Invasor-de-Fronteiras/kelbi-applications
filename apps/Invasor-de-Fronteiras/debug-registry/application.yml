@@ -1,5 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: guestbook
 spec:
+  destination:
+    namespace: apps
+    server: https://kubernetes.default.svc
+  project: kelbi-apps
   source:
+    path: charts/kelbi-app
+    repoURL: https://github.com/Invasor-de-Fronteiras/homelab.git
+    targetRevision: chart-kelbi-app@v2
     valuesObject:
       image: ghcr.io/Invasor-de-Fronteiras/debug-registry:1.8.0
 
