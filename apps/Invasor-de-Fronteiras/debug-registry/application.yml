@@ -1,0 +1,5 @@
+spec:
+  source:
+    valuesObject:
+      image: ghcr.io/Invasor-de-Fronteiras/debug-registry:1.7.0
+
