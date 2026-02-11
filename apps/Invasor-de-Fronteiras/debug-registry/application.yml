@@ -1,12 +1,13 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: guestbook
+  name: debug-registry
+  namespace: argocd
 spec:
   destination:
-    namespace: apps
+    namespace: kelbi-apps
     server: https://kubernetes.default.svc
-  project: kelbi-apps
+  project: controlplane
   source:
     path: charts/kelbi-app
     repoURL: https://github.com/Invasor-de-Fronteiras/homelab.git
