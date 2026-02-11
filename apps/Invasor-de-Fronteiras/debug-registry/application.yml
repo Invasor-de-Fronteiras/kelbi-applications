@@ -5,9 +5,9 @@ metadata:
   namespace: argocd
 spec:
   destination:
-    namespace: kelbi-apps
+    namespace: apps
     server: https://kubernetes.default.svc
-  project: controlplane
+  project: kelbi-apps
   source:
     path: charts/kelbi-app
     repoURL: https://github.com/Invasor-de-Fronteiras/homelab.git
