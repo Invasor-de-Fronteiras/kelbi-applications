@@ -13,7 +13,7 @@ spec:
     repoURL: https://github.com/Invasor-de-Fronteiras/homelab.git
     targetRevision: chart-kelbi-app@v2
     valuesObject:
-      image: ghcr.io/Invasor-de-Fronteiras/debug-registry:1.8.0  
+      image: ghcr.io/Invasor-de-Fronteiras/debug-registry:1.12.0
   syncPolicy:
     automated:
       prune: true
