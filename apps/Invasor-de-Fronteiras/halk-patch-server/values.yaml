@@ -1,0 +1,51 @@
+
+
+app:
+  name: "halk-patch-server-api"
+  image: "ghcr.io/invasor-de-fronteiras/halk-patch-server:sha-0f7fe87"
+  replicas: 1
+
+config:
+  env: kelbi-hatch-server-secrets
+  port: 5000
+
+service:
+  ports:
+    - name: api
+      port: 5000
+      targetPort: 5000
+      protocol: TCP
+    - name: release
+      port: 4000
+      targetPort: 4000
+      protocol: TCP
+    - name: prerelease
+      port: 4001
+      targetPort: 4001
+      protocol: TCP
+
+health_check:
+  path: /health
+
+resources:
+  limits:
+    cpu: 300m
+    memory: 500Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
+
+autoscaling:
+  enabled: true
+  minReplicas: 2
+  maxReplicas: 5
+
+
+volumes:
+  - name: data
+    hostPath:
+      path: /root/volumes/halk-patch-server/data
+      type: Directory
+volumeMounts:
+  - name: "data"
+    mountPath: /app/data

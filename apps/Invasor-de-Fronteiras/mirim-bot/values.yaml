@@ -1,0 +1,23 @@
+app:
+  name: "mirim-bot"
+  image: "ghcr.io/invasor-de-fronteiras/mirim_bot:sha-c9f7734"
+  replicas: 1
+
+config:
+  env: mirim-bot-secrets
+
+network:
+  expose: false
+
+resources:
+  limits:
+    cpu: 300m
+    memory: 500Mi
+  requests:
+    cpu: 100m
+    memory: 200Mi
+
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 1

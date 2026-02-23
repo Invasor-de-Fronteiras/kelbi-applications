@@ -1,0 +1,26 @@
+
+
+app:
+  name: "kelbi-web"
+  image: "ghcr.io/invasor-de-fronteiras/kelbi-web:sha-eb6cf56"
+  replicas: 1
+
+config:
+  env: kelbi-web-secrets
+  port: 3000
+network:
+  expose: true
+  domain: "admin.arcamh.com"
+
+resources:
+  limits:
+    cpu: 300m
+    memory: 500Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
+
+autoscaling:
+  enabled: true
+  minReplicas: 2
+  maxReplicas: 5
