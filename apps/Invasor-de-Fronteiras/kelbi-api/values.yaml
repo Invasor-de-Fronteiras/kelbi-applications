@@ -2,7 +2,7 @@
 
 app:
   name: "kelbi-api"
-  image: "ghcr.io/Invasor-de-Fronteiras/kelbi-api:1.4.2"
+  image: "ghcr.io/invasor-de-fronteiras/kelbi-api:1.4.3"
   replicas: 1
 config:
   env: kelbi-api-secrets
