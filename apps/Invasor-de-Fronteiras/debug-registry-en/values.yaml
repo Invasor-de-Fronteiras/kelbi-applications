@@ -1,0 +1,2 @@
+app:
+  image: ghcr.io/invasor-de-fronteiras/debug-registry:1.13.7
