@@ -18,6 +18,7 @@ autoscaling:
   enabled: false
   minReplicas: 1
   maxReplicas: 1
+type: singleton
 volumes:
   - name: static
     hostPath:
