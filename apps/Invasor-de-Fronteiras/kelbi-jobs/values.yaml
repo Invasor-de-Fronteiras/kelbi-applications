@@ -15,9 +15,9 @@ resources:
     cpu: 100m
     memory: 128Mi
 autoscaling:
-  enabled: true
-  minReplicas: 2
-  maxReplicas: 5
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 1
 volumes:
   - name: static
     hostPath:
