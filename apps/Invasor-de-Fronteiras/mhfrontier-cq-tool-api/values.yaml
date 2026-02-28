@@ -1,0 +1,27 @@
+
+app:
+  name: "mhfrontier-cq-tool-api"
+  image: "ghcr.io/invasor-de-fronteiras/mhfrontier-cq-tool-api:1.0.0"
+  replicas: 1
+config:
+  env: mhfrontier-cq-tool-api-secrets
+  port: 5001
+network:
+  expose: true
+  domain: "kelbi-api.arcamh.com"
+health_check:
+  path: /health
+resources:
+  limits:
+    cpu: 300m
+    memory: 500Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
+autoscaling:
+  enabled: true
+  minReplicas: 2
+  maxReplicas: 5
+securityContext:
+  runAsNonRoot: true
+  runAsUser: 1000
