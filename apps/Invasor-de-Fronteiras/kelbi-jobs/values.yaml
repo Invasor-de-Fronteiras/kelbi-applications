@@ -1,0 +1,31 @@
+
+
+app:
+  name: "kelbi-jobs"
+  image: "ghcr.io/invasor-de-fronteiras/kelbi-jobs:1.0.1"
+  replicas: 1
+config:
+  env: kelbi-jobs-secrets
+  port: 8080
+resources:
+  limits:
+    cpu: 300m
+    memory: 500Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
+autoscaling:
+  enabled: true
+  minReplicas: 2
+  maxReplicas: 5
+volumes:
+  - name: static
+    hostPath:
+      path: /root/volumes/kelbi/static
+      type: Directory
+volumeMounts:
+  - name: "static"
+    mountPath: /data/assets
+securityContext:
+  runAsNonRoot: true
+  runAsUser: 1000
