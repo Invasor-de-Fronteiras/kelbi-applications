@@ -1,7 +1,7 @@
 
 app:
   name: "mhfrontier-cq-tool-api"
-  image: "ghcr.io/invasor-de-fronteiras/mhfrontier-cq-tool-api:1.0.0"
+  image: "ghcr.io/invasor-de-fronteiras/mhfrontier-cq-tool-api:1.1.0"
   replicas: 1
 config:
   env: mhfrontier-cq-tool-api-secrets
