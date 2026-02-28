@@ -6,9 +6,6 @@ app:
 config:
   env: mirim-bot-secrets
 
-network:
-  expose: false
-
 resources:
   limits:
     cpu: 300m
@@ -17,7 +14,4 @@ resources:
     cpu: 100m
     memory: 200Mi
 
-autoscaling:
-  enabled: false
-  minReplicas: 1
-  maxReplicas: 1
+type: singleton
