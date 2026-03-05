@@ -3,7 +3,7 @@
 app:
   name: "kelbi-web"
   image: "ghcr.io/invasor-de-fronteiras/kelbi-web:sha-03e60f2"
-  replicas: 1
+  replicas: 0
 
 config:
   env: kelbi-web-secrets
@@ -21,6 +21,6 @@ resources:
     memory: 128Mi
 
 autoscaling:
-  enabled: true
+  enabled: false
   minReplicas: 2
   maxReplicas: 5
