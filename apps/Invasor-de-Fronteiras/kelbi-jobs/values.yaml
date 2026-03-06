@@ -3,7 +3,7 @@
 app:
   name: "kelbi-jobs"
   image: "ghcr.io/invasor-de-fronteiras/kelbi-jobs:1.3.1"
-  replicas: 0
+  replicas: 1
 config:
   env: kelbi-jobs-secrets
   port: 8080

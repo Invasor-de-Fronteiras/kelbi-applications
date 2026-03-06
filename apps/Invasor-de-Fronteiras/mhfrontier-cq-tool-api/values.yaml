@@ -2,7 +2,7 @@
 app:
   name: "mhfrontier-cq-tool-api"
   image: "ghcr.io/invasor-de-fronteiras/mhfrontier-cq-tool-api:1.1.0"
-  replicas: 0
+  replicas: 1
 config:
   env: mhfrontier-cq-tool-api-secrets
   port: 5001
@@ -19,7 +19,7 @@ resources:
     cpu: 100m
     memory: 128Mi
 autoscaling:
-  enabled: false
+  enabled: true
   minReplicas: 2
   maxReplicas: 5
 securityContext:

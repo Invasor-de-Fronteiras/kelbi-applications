@@ -3,7 +3,7 @@
 app:
   name: "kelbi-api"
   image: "ghcr.io/invasor-de-fronteiras/kelbi-api:1.5.0"
-  replicas: 0
+  replicas: 1
 config:
   env: kelbi-api-secrets
   port: 8080
@@ -20,7 +20,7 @@ resources:
     cpu: 100m
     memory: 128Mi
 autoscaling:
-  enabled: false
+  enabled: true
   minReplicas: 2
   maxReplicas: 5
 volumes:
